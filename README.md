@@ -106,6 +106,28 @@ High level:
 
 \- Access to a FHIR server URL, e.g.:
 
+## 📺 Demo Output
+
+Example run of the alert evaluator:
+
+```text
+🚀 evaluate_tns_alerts.py starting up...
+🔐 Getting Azure FHIR token...
+📥 Fetching synthetic surgeries (ServiceRequest)...
+🔎 Found 20 surgeries.
+
+==============================
+  🩸 Surgeries Needing T&S
+==============================
+
+⚠️ Patient 74a2fd87-885b-5eca-9f8b-9141915dba51 | Surgery be6f0bc0-781b-4079-816b-2484902e6a34
+   Reason: Latest Type & Screen is older than 72 hours.
+
+⚠️ Patient a3a12d01-dc21-565b-89e2-da60e7fc80dc | Surgery 8d8d2566-5259-45b1-ade5-0f9c378835c2
+   Reason: No Type & Screen on file before surgery.
+
+... (additional cases omitted for brevity) ...
+
 
 
 &nbsp; ```text
