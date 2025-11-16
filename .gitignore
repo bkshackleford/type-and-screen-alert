@@ -1,0 +1,17 @@
+# Ignore local data (synthetic or real)
+data/
+*.ndjson
+
+# Ignore any MIMIC folders accidentally dropped in here
+MIMIC*/
+mimic*/
+*MIMIC*
+*mimic*
+
+# Ignore Python cache
+__pycache__/
+*.pyc
+
+# Ignore editor configs
+.vscode/
+.idea/
