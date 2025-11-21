@@ -1,0 +1,71 @@
+<svg width="1600" height="400" viewBox="0 0 1600 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Type & Screen + Transfusion Readiness Agent Banner (Dark)">
+  <defs>
+    <linearGradient id="bgGradDark" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0b1220"/>
+      <stop offset="100%" stop-color="#1a0b0b"/>
+    </linearGradient>
+    <linearGradient id="pillGradDark" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#111827"/>
+      <stop offset="100%" stop-color="#1f2937"/>
+    </linearGradient>
+    <filter id="shadowDark" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#000" flood-opacity="0.35"/>
+    </filter>
+    <style>
+      .title { font: 700 48px/1.2 system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, "Helvetica Neue", Arial, sans-serif; fill: #f9fafb; }
+      .subtitle { font: 400 22px/1.4 system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, "Helvetica Neue", Arial, sans-serif; fill: #d1d5db; }
+      .pillText { font: 600 18px system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, "Helvetica Neue", Arial, sans-serif; fill: #e5e7eb; }
+      .small { font: 400 16px system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, "Helvetica Neue", Arial, sans-serif; fill: #9ca3af; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect x="0" y="0" width="1600" height="400" fill="url(#bgGradDark)"/>
+  <g opacity="0.22">
+    <circle cx="1500" cy="50" r="220" fill="#0ea5e9"/>
+    <circle cx="100" cy="350" r="160" fill="#ef4444"/>
+  </g>
+
+  <!-- Card -->
+  <g filter="url(#shadowDark)">
+    <rect x="80" y="80" rx="28" ry="28" width="1440" height="240" fill="rgba(17,24,39,0.85)" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+  </g>
+
+  <!-- Content -->
+  <g transform="translate(120,130)">
+    <text class="title">Type &amp; Screen + Transfusion Readiness Agent</text>
+    <text class="subtitle" y="52">FHIR-based CDS with synthetic data • LIS⇄EHR interoperability • Streamlit dashboard</text>
+    <text class="small" y="92">LOINC: 883-9 (ABO), 10331-7 (Rh), 890-4 (Antibody screen) • Specimen validity &amp; pre-op alerts</text>
+  </g>
+
+  <!-- Pills -->
+  <g transform="translate(120,260)">
+    <g>
+      <rect x="0" y="0" rx="18" ry="18" width="130" height="36" fill="url(#pillGradDark)" stroke="rgba(255,255,255,0.18)"/>
+      <text class="pillText" x="20" y="24">FHIR R4</text>
+    </g>
+    <g transform="translate(145,0)">
+      <rect x="0" y="0" rx="18" ry="18" width="135" height="36" fill="url(#pillGradDark)" stroke="rgba(255,255,255,0.18)"/>
+      <text class="pillText" x="20" y="24">Azure FHIR</text>
+    </g>
+    <g transform="translate(295,0)">
+      <rect x="0" y="0" rx="18" ry="18" width="145" height="36" fill="url(#pillGradDark)" stroke="rgba(255,255,255,0.18)"/>
+      <text class="pillText" x="20" y="24">Streamlit</text>
+    </g>
+    <g transform="translate(455,0)">
+      <rect x="0" y="0" rx="18" ry="18" width="120" height="36" fill="url(#pillGradDark)" stroke="rgba(255,255,255,0.18)"/>
+      <text class="pillText" x="20" y="24">Python</text>
+    </g>
+    <g transform="translate(590,0)">
+      <rect x="0" y="0" rx="18" ry="18" width="130" height="36" fill="url(#pillGradDark)" stroke="rgba(255,255,255,0.18)"/>
+      <text class="pillText" x="20" y="24">LOINC</text>
+    </g>
+    <g transform="translate(740,0)">
+      <rect x="0" y="0" rx="18" ry="18" width="150" height="36" fill="url(#pillGradDark)" stroke="rgba(255,255,255,0.18)"/>
+      <text class="pillText" x="20" y="24">SNOMED CT</text>
+    </g>
+  </g>
+
+  <!-- Attribution -->
+  <text x="1480" y="370" text-anchor="end" class="small">© 2025 Bonnie K. Shackleford</text>
+</svg>
