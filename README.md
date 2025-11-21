@@ -1,7 +1,7 @@
 # 🩸 Type & Screen + Transfusion Readiness Agent  
 ### *FHIR-Based Clinical Decision Support Prototype*
 
-
+![Banner](images/readiness_banner.svg)
 
 ![FHIR](https://img.shields.io/badge/FHIR-R4-orange?logo=fhir)
 ![Azure](https://img.shields.io/badge/Cloud-Azure-blue?logo=microsoftazure)
@@ -27,7 +27,7 @@ It models how **EHR/LIS integration** (e.g., Cerner + WellSky) could automatical
 ---
 
 ## ⚙️ Architecture
-
+![Architecture Diagram](images/transfusion_flowchart.svg)
 
 ### Workflow Summary
 1. **Data generation**  
@@ -64,6 +64,9 @@ It models how **EHR/LIS integration** (e.g., Cerner + WellSky) could automatical
   "resourceType": "Observation",
   "code": { "coding": [{ "system": "http://loinc.org", "code": "883-9", "display": "ABO group" }] },
   "valueString": "O",
+  "effectiveDateTime": "2025-11-19T08:00:00Z"
+}
+
   "effectiveDateTime": "2025-11-19T08:00:00Z"
 }
 
