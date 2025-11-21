@@ -27,7 +27,7 @@ It models how **EHR/LIS integration** (e.g., Cerner + WellSky) could automatical
 ---
 
 ## ⚙️ Architecture
-![Architecture Diagram](images/transfusion_flowchart.svg)
+
 
 ### Workflow Summary
 1. **Data generation**  
