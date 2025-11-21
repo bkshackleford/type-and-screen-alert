@@ -2,9 +2,9 @@
 ### *FHIR-Based Clinical Decision Support Prototype*
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="images/readiness_banner_dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="images/readiness_banner.svg">
-  <img alt="Type & Screen + Transfusion Readiness Agent" src="images/readiness_banner.svg">
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/<USER>/<REPO>/<BRANCH>/images/readiness_banner_dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/<USER>/<REPO>/<BRANCH>/images/readiness_banner.svg">
+  <img alt="Type & Screen + Transfusion Readiness Agent" src="https://raw.githubusercontent.com/<USER>/<REPO>/<BRANCH>/images/readiness_banner.svg">
 </picture>
 
 
@@ -34,9 +34,9 @@ It models how **EHR/LIS integration** (e.g., Cerner + WellSky) could automatical
 
 ## ⚙️ Architecture
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="images/transfusion_flowchart_dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="images/transfusion_flowchart.svg">
-  <img alt="FHIR Architecture Flowchart" src="images/transfusion_flowchart.svg">
+  <source media="(prefers-color-scheme: dark)" srcset="images/readiness_banner_dark_test.svg">
+  <source media="(prefers-color-scheme: light)" srcset="images/readiness_banner.svg">
+  <img alt="Type & Screen + Transfusion Readiness Agent" src="images/readiness_banner.svg">
 </picture>
 
 
