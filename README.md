@@ -1,138 +1,69 @@
-\# Type \& Screen Readiness Alert (FHIR + Synthetic Data)
+# 🩸 Type & Screen + Transfusion Readiness Agent  
+### *FHIR-Based Clinical Decision Support Prototype*
 
+![Banner](images/readiness_banner.svg)
 
-
-\## Overview
-
-
-
-This project demonstrates how a pre–operative \*\*Type \& Screen readiness alert\*\* could work using:
-
-
-
-\- 🧪 \*\*Synthetic lab data\*\* for:
-
-&nbsp; - ABO group (LOINC \*\*883-9\*\*)
-
-&nbsp; - Rh type (LOINC \*\*10331-7\*\*)
-
-&nbsp; - Antibody screen (LOINC \*\*890-4\*\*)
-
-\- 🏥 \*\*Synthetic surgery orders\*\* modeled as FHIR `ServiceRequest`
-
-\- ☁️ An \*\*Azure Health Data Services FHIR\*\* server
-
-\- 🧾 Simple Python scripts to:
-
-&nbsp; - Generate FHIR resources (NDJSON)
-
-&nbsp; - Upload them to FHIR
-
-&nbsp; - Evaluate an alert rule:  
-
-&nbsp;   > “Does this patient have a valid Type \& Screen within 72 hours of surgery?”
-
-
-
-The clinical idea:  
-
-Before surgery, patients should have a \*\*current Type \& Screen\*\* so blood is available if needed. This project shows how that logic could be implemented on FHIR data as a decision-support style alert.
-
-
+![FHIR](https://img.shields.io/badge/FHIR-R4-orange?logo=fhir)
+![Azure](https://img.shields.io/badge/Cloud-Azure-blue?logo=microsoftazure)
+![Streamlit](https://img.shields.io/badge/App-Streamlit-red?logo=streamlit)
+![Python](https://img.shields.io/badge/Language-Python-yellow?logo=python)
+![LOINC](https://img.shields.io/badge/Terminology-LOINC-green)
+![SNOMEDCT](https://img.shields.io/badge/Terminology-SNOMEDCT-lightgrey)
 
 ---
 
+## 🧭 Overview
+This project demonstrates how **FHIR resources**, **synthetic lab data**, and **Python-based analytics** can enable a *pre-operative Type & Screen readiness alert* and *transfusion readiness dashboard*.
 
-
-\## Architecture
-
-
-
-High level:
-
-
-
-1\. \*\*Data generation\*\*
-
-&nbsp;  - `make\_synthetic\_type\_and\_screen.py`  
-
-&nbsp;    → creates synthetic FHIR `Observation` resources (ABO, Rh, Ab screen)  
-
-&nbsp;  - `make\_synthetic\_surgery\_requests.py`  
-
-&nbsp;    → creates FHIR `ServiceRequest` resources for upcoming surgeries
-
-
-
-2\. \*\*Data upload\*\*
-
-&nbsp;  - `upload\_synthetic\_type\_and\_screen.py`  
-
-&nbsp;  - `upload\_synthetic\_surgery\_requests.py`  
-
-&nbsp;  These use Azure CLI to get a token and POST resources to the FHIR server.
-
-
-
-3\. \*\*Alert evaluation\*\*
-
-&nbsp;  - `evaluate\_tns\_alerts.py` queries:
-
-&nbsp;    - surgeries (`ServiceRequest`)
-
-&nbsp;    - recent Type \& Screen observations (`Observation` with LOINC 883-9, 10331-7, 890-4)
-
-&nbsp;  - It flags surgeries where:
-
-&nbsp;    - ❌ No T\&S exists before surgery, or  
-
-&nbsp;    - ❌ Latest T\&S is older than \*\*72 hours\*\* before the scheduled surgery time
-
-
+It models how **EHR/LIS integration** (e.g., Cerner + WellSky) could automatically surface **blood-readiness alerts** to clinicians before surgery—supporting safer, faster, and more efficient perioperative workflows.
 
 ---
 
+## 🎯 Goals
+- Integrate **Type & Screen status**, **specimen validity**, and **blood product readiness** in one FHIR-driven view.  
+- Enable **Clinical Decision Support (CDS)** by analyzing `Observation`, `Specimen`, and `ServiceRequest` resources.  
+- Improve **Patient Blood Management (PBM)** by preventing same-day transfusion delays.
 
+---
 
-\## Prerequisites
+## ⚙️ Architecture
+![Architecture Diagram](images/transfusion_flowchart.svg)
 
+### Workflow Summary
+1. **Data generation**  
+   - `make_synthetic_type_and_screen.py` → Creates synthetic FHIR Observations (ABO, Rh, Antibody Screen).  
+   - `make_synthetic_surgery_requests.py` → Creates FHIR `ServiceRequest` resources for upcoming surgeries.  
+2. **Data upload**  
+   - `upload_synthetic_type_and_screen.py` and `upload_synthetic_surgery_requests.py` use Azure CLI tokens to POST resources to the FHIR server.  
+3. **Alert evaluation**  
+   - `evaluate_tns_alerts.py` queries the FHIR endpoint to detect:  
+     - ❌ No T&S before surgery  
+     - ❌ Latest T&S older than 72 hours pre-op  
+4. **Visualization**  
+   - Displays results in a Streamlit dashboard for OR or Blood Bank teams.
 
+---
 
-\- Python 3.10+  
+## 🧰 Tech Stack
 
-\- Azure subscription with \*\*Azure Health Data Services – FHIR\*\* service
+| Layer | Technology |
+|-------|-------------|
+| **Language** | Python 3.11 |
+| **Frameworks** | Streamlit • Pandas • FHIR-Client |
+| **FHIR Server** | Azure Health Data Services FHIR / HAPI-FHIR (local testing) |
+| **Data Source** | Synthetic MIMIC-IV FHIR exports (`Observation`, `Specimen`, `ServiceRequest`) |
+| **Terminologies** | LOINC (883-9, 10331-7, 890-4) • SNOMED CT (Blood Products) |
 
-\- Azure CLI installed and logged in (`az login`)
+---
 
-\- Access to a FHIR server URL, e.g.:
+## 🧪 Example FHIR Resources
 
-## 📺 Demo Output
-
-Example run of the alert evaluator:
-
-```text
-🚀 evaluate_tns_alerts.py starting up...
-🔐 Getting Azure FHIR token...
-📥 Fetching synthetic surgeries (ServiceRequest)...
-🔎 Found 20 surgeries.
-
-==============================
-  🩸 Surgeries Needing T&S
-==============================
-
-⚠️ Patient 74a2fd87-885b-5eca-9f8b-9141915dba51 | Surgery be6f0bc0-781b-4079-816b-2484902e6a34
-   Reason: Latest Type & Screen is older than 72 hours.
-
-⚠️ Patient a3a12d01-dc21-565b-89e2-da60e7fc80dc | Surgery 8d8d2566-5259-45b1-ade5-0f9c378835c2
-   Reason: No Type & Screen on file before surgery.
-
-... (additional cases omitted for brevity) ...
-
-
-
-&nbsp; ```text
-
-&nbsp; https://fhirserver33-fhirservice333.fhir.azurehealthcareapis.com
-
-
+**Observation (ABO Group)**  
+```json
+{
+  "resourceType": "Observation",
+  "code": { "coding": [{ "system": "http://loinc.org", "code": "883-9", "display": "ABO group" }] },
+  "valueString": "O",
+  "effectiveDateTime": "2025-11-19T08:00:00Z"
+}
 
