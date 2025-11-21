@@ -8,6 +8,7 @@
 </picture>
 
 
+
 ![FHIR](https://img.shields.io/badge/FHIR-R4-orange?logo=fhir)
 ![Azure](https://img.shields.io/badge/Cloud-Azure-blue?logo=microsoftazure)
 ![Streamlit](https://img.shields.io/badge/App-Streamlit-red?logo=streamlit)
@@ -37,6 +38,7 @@ It models how **EHR/LIS integration** (e.g., Cerner + WellSky) could automatical
   <source media="(prefers-color-scheme: light)" srcset="images/transfusion_flowchart.svg">
   <img alt="FHIR Architecture Flowchart" src="images/transfusion_flowchart.svg">
 </picture>
+
 
 ### Workflow Summary
 1. **Data generation**  
