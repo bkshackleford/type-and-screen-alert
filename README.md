@@ -1,7 +1,7 @@
 # 🩸 Type & Screen + Transfusion Readiness Agent  
 ### *FHIR-Based Clinical Decision Support Prototype*
 
-![Banner](images/readiness_banner.svg)
+
 
 ![FHIR](https://img.shields.io/badge/FHIR-R4-orange?logo=fhir)
 ![Azure](https://img.shields.io/badge/Cloud-Azure-blue?logo=microsoftazure)
