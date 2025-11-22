@@ -99,8 +99,9 @@ Medical Laboratory Scientist • Health Informatics Graduate Student
 
 Bridging LIS & EHR systems with FHIR interoperability and AI-driven clinical decision support.
 
-🔗 LinkedIn
- | 💻 GitHub
+🔗 LinkedIn: www.linkedin.com/in/bonnie-shackleford-mshim-candidate-mbahc-mls-ascp-89098815a
+  
+ 💻 GitHub: https://github.com/bkshackleford
 
 📘 License
 
