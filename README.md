@@ -3,10 +3,6 @@
 
 ![Banner](images/readiness_banner.svg)
 
-
-
-
-
 ![FHIR](https://img.shields.io/badge/FHIR-R4-orange?logo=fhir)
 ![Azure](https://img.shields.io/badge/Cloud-Azure-blue?logo=microsoftazure)
 ![Streamlit](https://img.shields.io/badge/App-Streamlit-red?logo=streamlit)
@@ -31,8 +27,8 @@ It models how **EHR/LIS integration** (e.g., Cerner + WellSky) could automatical
 ---
 
 ## ⚙️ Architecture
-![Architecture Diagram](images/transfusion_flowchart.svg)
 
+![Architecture Diagram](images/transfusion_flowchart.svg)
 
 ### Workflow Summary
 1. **Data generation**  
@@ -63,7 +59,8 @@ It models how **EHR/LIS integration** (e.g., Cerner + WellSky) could automatical
 
 ## 🧪 Example FHIR Resources
 
-**Observation (ABO Group)**  
+**Observation (ABO Group)**
+
 ```json
 {
   "resourceType": "Observation",
@@ -75,9 +72,8 @@ It models how **EHR/LIS integration** (e.g., Cerner + WellSky) could automatical
 
 
 
-## 🏁 Quick Start
 
-```bash
+🏁 Quick Start
 # Create and activate a virtual environment (optional)
 python -m venv .venv
 .venv\Scripts\activate     # (Windows)
@@ -93,10 +89,22 @@ python scripts/upload_synthetic_type_and_screen.py
 python scripts/upload_synthetic_surgery_requests.py
 python evaluate_tns_alerts.py
 
-## 👩‍💻 Author
-**Bonnie K. Shackleford**
+🌟 About This Project
 
-## 📘 License
-MIT License © 2025 Bonnie K. Shackleford  
-Please use to better medicine and adapt with attribution.
+This repository is part of Bonnie K. Shackleford’s applied informatics work, connecting Laboratory Information Systems (LIS) and Electronic Health Records (EHR) using FHIR-based interoperability and AI-ready modeling.
+It demonstrates perioperative transfusion readiness logic and clinical decision support concepts aligned with Patient Blood Management (PBM) workflows.
 
+👩‍💻 Author
+
+Bonnie K. Shackleford
+Medical Laboratory Scientist • Health Informatics Graduate Student
+
+Bridging LIS & EHR systems with FHIR interoperability and AI-driven clinical decision support.
+
+🔗 LinkedIn
+ | 💻 GitHub
+
+📘 License
+
+MIT License © 2025 Bonnie K. Shackleford
+Please use this project to improve healthcare interoperability and patient safety — adapt freely with attribution.
