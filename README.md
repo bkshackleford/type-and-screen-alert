@@ -72,6 +72,9 @@ It models how **EHR/LIS integration** (e.g., Cerner + WellSky) could automatical
   "effectiveDateTime": "2025-11-19T08:00:00Z"
 }
 
+
+
+
 ## 🏁 Quick Start
 
 ```bash
