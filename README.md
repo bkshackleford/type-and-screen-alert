@@ -2,9 +2,9 @@
 ### *FHIR-Based Clinical Decision Support Prototype*
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/<USER>/<REPO>/<BRANCH>/images/readiness_banner_dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/<USER>/<REPO>/<BRANCH>/images/readiness_banner.svg">
-  <img alt="Type & Screen + Transfusion Readiness Agent" src="https://raw.githubusercontent.com/<USER>/<REPO>/<BRANCH>/images/readiness_banner.svg">
+  <source media="(prefers-color-scheme: dark)" srcset="images/readiness_banner_dark_compat.svg">
+  <source media="(prefers-color-scheme: light)" srcset="images/readiness_banner_compat.svg">
+  <img alt="Type & Screen + Transfusion Readiness Agent" src="images/readiness_banner_compat.svg" width="1200">
 </picture>
 
 
