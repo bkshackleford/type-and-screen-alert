@@ -1,0 +1,57 @@
+<svg width="1600" height="400" viewBox="0 0 1600 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Type & Screen + Transfusion Readiness Agent Banner (Dark, Compat)">
+  <defs>
+    <linearGradient id="bgGradDarkCompat" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0b1220"/>
+      <stop offset="100%" stop-color="#1a0b0b"/>
+    </linearGradient>
+    <style>
+      .title { font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Arial, sans-serif; font-weight: 700; font-size: 48px; fill: #f9fafb; }
+      .subtitle { font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Arial, sans-serif; font-weight: 400; font-size: 22px; fill: #e5e7eb; }
+      .small { font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Arial, sans-serif; font-weight: 400; font-size: 16px; fill: #cbd5e1; }
+      .pillText { font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Arial, sans-serif; font-weight: 600; font-size: 18px; fill: #e5e7eb; }
+    </style>
+  </defs>
+
+  <rect width="1600" height="400" fill="url(#bgGradDarkCompat)"/>
+  <g opacity="0.22">
+    <circle cx="1500" cy="60" r="220" fill="#0ea5e9"/>
+    <circle cx="140" cy="340" r="160" fill="#ef4444"/>
+  </g>
+
+  <rect x="80" y="80" width="1440" height="240" rx="28" ry="28" fill="#111827" fill-opacity="0.85" stroke="#ffffff" stroke-opacity="0.08" stroke-width="1"/>
+
+  <g transform="translate(120,130)">
+    <text class="title">Type &amp; Screen + Transfusion Readiness Agent</text>
+    <text class="subtitle" y="52">FHIR-based CDS • Synthetic data • LIS↔EHR • Streamlit dashboard</text>
+    <text class="small" y="92">LOINC: 883-9 (ABO), 10331-7 (Rh), 890-4 (Antibody screen)</text>
+  </g>
+
+  <g transform="translate(120,260)">
+    <g>
+      <rect x="0" y="0" rx="18" ry="18" width="130" height="36" fill="#111827" fill-opacity="0.95" stroke="#ffffff" stroke-opacity="0.18" stroke-width="1"/>
+      <text class="pillText" x="20" y="24">FHIR R4</text>
+    </g>
+    <g transform="translate(145,0)">
+      <rect x="0" y="0" rx="18" ry="18" width="135" height="36" fill="#111827" fill-opacity="0.95" stroke="#ffffff" stroke-opacity="0.18" stroke-width="1"/>
+      <text class="pillText" x="20" y="24">Azure FHIR</text>
+    </g>
+    <g transform="translate(295,0)">
+      <rect x="0" y="0" rx="18" ry="18" width="145" height="36" fill="#111827" fill-opacity="0.95" stroke="#ffffff" stroke-opacity="0.18" stroke-width="1"/>
+      <text class="pillText" x="20" y="24">Streamlit</text>
+    </g>
+    <g transform="translate(455,0)">
+      <rect x="0" y="0" rx="18" ry="18" width="120" height="36" fill="#111827" fill-opacity="0.95" stroke="#ffffff" stroke-opacity="0.18" stroke-width="1"/>
+      <text class="pillText" x="20" y="24">Python</text>
+    </g>
+    <g transform="translate(590,0)">
+      <rect x="0" y="0" rx="18" ry="18" width="130" height="36" fill="#111827" fill-opacity="0.95" stroke="#ffffff" stroke-opacity="0.18" stroke-width="1"/>
+      <text class="pillText" x="20" y="24">LOINC</text>
+    </g>
+    <g transform="translate(740,0)">
+      <rect x="0" y="0" rx="18" ry="18" width="150" height="36" fill="#111827" fill-opacity="0.95" stroke="#ffffff" stroke-opacity="0.18" stroke-width="1"/>
+      <text class="pillText" x="20" y="24">SNOMED CT</text>
+    </g>
+  </g>
+
+  <text x="1480" y="370" text-anchor="end" class="small">© 2025 Bonnie K. Shackleford</text>
+</svg>
