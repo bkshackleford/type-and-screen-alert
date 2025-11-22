@@ -69,7 +69,7 @@ It models how **EHR/LIS integration** (e.g., Cerner + WellSky) could automatical
   "valueString": "O",
   "effectiveDateTime": "2025-11-19T08:00:00Z"
 }
-
+```markdown
 
 🏁 Quick Start
 # Create and activate a virtual environment (optional)
