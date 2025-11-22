@@ -57,8 +57,9 @@ It models how **EHR/LIS integration** (e.g., Cerner + WellSky) could automatical
 
 ---
 
-## 🧪 Example FHIR Resources
 
+```markdown
+## 🧪 Example FHIR Resources
 **Observation (ABO Group)**
 
 ```json
@@ -68,9 +69,6 @@ It models how **EHR/LIS integration** (e.g., Cerner + WellSky) could automatical
   "valueString": "O",
   "effectiveDateTime": "2025-11-19T08:00:00Z"
 }
-
-
-
 
 
 🏁 Quick Start
