@@ -72,4 +72,28 @@ It models how **EHR/LIS integration** (e.g., Cerner + WellSky) could automatical
   "effectiveDateTime": "2025-11-19T08:00:00Z"
 }
 
+## 🏁 Quick Start
+
+```bash
+# Create and activate a virtual environment (optional)
+python -m venv .venv
+.venv\Scripts\activate     # (Windows)
+source .venv/bin/activate  # (macOS/Linux)
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Run key scripts
+python scripts/make_synthetic_type_and_screen.py
+python scripts/make_synthetic_surgery_requests.py
+python scripts/upload_synthetic_type_and_screen.py
+python scripts/upload_synthetic_surgery_requests.py
+python evaluate_tns_alerts.py
+
+## 👩‍💻 Author
+**Bonnie K. Shackleford**
+
+## 📘 License
+MIT License © 2025 Bonnie K. Shackleford  
+Please use to better medicine and adapt with attribution.
 
