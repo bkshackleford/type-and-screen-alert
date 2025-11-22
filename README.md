@@ -1,11 +1,7 @@
 # 🩸 Type & Screen + Transfusion Readiness Agent  
 ### *FHIR-Based Clinical Decision Support Prototype*
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/bkshackleford/type-and-screen-alert/main/images/readiness_banner_dark_compat.svg">
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/bkshackleford/type-and-screen-alert/main/images/readiness_banner_compat.svg">
-  <img alt="Type & Screen + Transfusion Readiness Agent" src="https://raw.githubusercontent.com/bkshackleford/type-and-screen-alert/main/images/readiness_banner_compat.svg">
-</picture>
+![Banner](images/readiness_banner.svg)
 
 
 
@@ -35,11 +31,7 @@ It models how **EHR/LIS integration** (e.g., Cerner + WellSky) could automatical
 ---
 
 ## ⚙️ Architecture
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="images/readiness_banner_dark_test.svg">
-  <source media="(prefers-color-scheme: light)" srcset="images/readiness_banner.svg">
-  <img alt="Type & Screen + Transfusion Readiness Agent" src="images/readiness_banner.svg">
-</picture>
+![Architecture Diagram](images/transfusion_flowchart.svg)
 
 
 ### Workflow Summary
